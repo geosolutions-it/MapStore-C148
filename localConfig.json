@@ -492,7 +492,12 @@
               "name": "PHOTOMAP"
             }
           },
-          "MapSearch", "CreateNewMap", "FeaturedMaps", "ContentTabs",
+          "MapSearch", {
+            "name": "CreateNewMap",
+            "cfg": {
+              "allowedRoles": "ADMIN"
+            }
+          }, "FeaturedMaps", "ContentTabs",
           {
             "name": "Maps",
             "cfg": {
