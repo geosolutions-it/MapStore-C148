@@ -31,7 +31,8 @@ import HTML from '../../MapStore2/web/client/components/I18N/HTML';
 class Footer extends React.Component {
 
     static propTypes = {
-        logo: PropTypes.object
+        logo: PropTypes.object,
+        descriptionId: PropTypes.string
     };
 
     static defaultProps = {
@@ -47,6 +48,7 @@ class Footer extends React.Component {
 
     render() {
         const { href, ...logo } = this.props.logo || {};
+        const {descriptionId} = this.props;
         const image = (
             <img
                 src={logo.src}
@@ -68,7 +70,9 @@ class Footer extends React.Component {
                 </Row>}
                 <Row>
                     <Col xs={12} className="text-center">
-                        <HTML msgId="home.footerDescription"/>
+                    <div className="pm-footer-desc">
+                         { descriptionId ? <HTML msgId={descriptionId}/> : null }
+                    </div>
                     </Col>
                 </Row>
             </Grid>

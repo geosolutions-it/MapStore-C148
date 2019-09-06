@@ -58,6 +58,11 @@
         "maptype": {
             "mapType": "{context.mode === 'desktop' ? 'openlayers' : 'leaflet'}"
         },
+        "theme":{
+            "selectedTheme":{
+                "id":"surveye"
+            }
+        },
         "catalog": {
           "default": {
             "newService": {
@@ -361,8 +366,8 @@
             {
               "name": "PhotomapAttribution",
               "cfg": {
-                "attributionTextId": "photomapViewerAttribution",
-                "src": "assets/img/logo.png"
+                "attributionTextId": "photomapSurveyeViewerAttribution",
+                "src": "assets/img/surveye-logo.png"
               }
             }
         ],
@@ -487,7 +492,7 @@
             "cfg": {
                 "label": "PHOTOMAP",
                 "href": "#",
-                "src": "assets/img/logo.png"
+                "src": "assets/img/surveye-logo.png"
             }
         },
         "ScrollTop", "Notifications"],
@@ -526,9 +531,9 @@
           {
             "name": "Footer",
             "cfg": {
-              "descriptionId": "home.footerDescription",
+              "descriptionId": "home.footerSurveyeDescription",
               "logo": {
-                "src": "assets/img/logo.png",
+                "src": "assets/img/surveye-logo.png",
                 "width": 140,
                 "href": "",
                 "title": "PHOTOMAP",
@@ -586,9 +591,9 @@
           {
             "name": "Footer",
             "cfg": {
-              "descriptionId": "home.footerDescription",
+              "descriptionId": "home.footerSurveyeDescription",
               "logo": {
-                "src": "assets/img/logo.png",
+                "src": "assets/img/surveye-logo.png",
                 "width": 140,
                 "href": "",
                 "title": "PHOTOMAP",

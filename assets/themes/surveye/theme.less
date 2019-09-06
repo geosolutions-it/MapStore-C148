@@ -1,0 +1,155 @@
+@import "../../../MapStore2/web/client/themes/default/base.less";
+@import "../../../MapStore2/web/client/themes/default/icons.less";
+@import "../../../MapStore2/web/client/themes/default/bootstrap-theme.less";
+@import "../../../MapStore2/web/client/themes/default/ms2-theme.less";
+@import "../../../MapStore2/web/client/themes/default/variables.less";
+@import "variables.less";
+
+// 
+
+.customer-logo {
+    height: 40px;
+}
+
+.page-maps {
+
+    /* change banner style in homepage */
+    div.ms-home-description.jumbotron {
+        color              : @ms2-color-text-primary;
+        background-position: top;
+        background-image   : url('../../img/surveye-banner.png');
+        background-repeat  : no-repeat;
+
+        @media screen and (min-width: 768px) {
+            min-height: 195px;
+        }
+
+        &>.container {
+            background-color: unset;
+        }
+    }
+
+    /* change order and text colors of tabs in homepage */
+    .nav {
+        &.nav-tabs>li>a {
+            color      : inherit;
+            font-weight: 600;
+        }
+
+        &.nav-tabs>li.active>a,
+        &.nav-tabs>li.active>a:hover,
+        &.nav-tabs>li.active>a:focus {
+            border             : 1px solid @pm-green;
+            border-bottom-color: transparent;
+            color              : @pm-blue;
+        }
+
+        &.nav-tabs {
+            border-bottom-color: @pm-green;
+        }
+    }
+}
+
+// site navigation bar
+#mapstore-navbar-container {
+
+    // change the height to make blue bottom border visible
+    &.navbar {
+        height       : 57px;
+        border-bottom: 4px solid @pm-dark-blue;
+    }
+
+    // change all navbar link to blue color
+    a {
+        text-transform: uppercase;
+        font-weight   : bold;
+    }
+
+    .dropdown-menu .glyphicon {
+        color: @pm-blue;
+    }
+
+    #mapstore-burger-menu .btn,
+    #home-button {
+        background-color: @pm-light-blue;
+        border-color    : @pm-light-blue;
+    }
+
+    // change login button 
+    #loginButton {
+        background-color: @pm-green;
+        border-color    : @pm-green;
+    }
+}
+
+
+/* green border on search bar */
+.MapSearchBar.maps-search .input-group {
+    outline: 1px solid @pm-green;
+
+    .form-control {
+        color      : @pm-color-text-light;
+        font-weight: normal;
+    }
+}
+
+.MapSearchBar {
+    .input-group {
+        outline: 1px solid @pm-light-blue;
+    }
+
+    .form-control {
+        font-weight: bold;
+    }
+
+    .input-group-addon .glyphicon-search {
+        color: @ms2-color-text;
+    }
+}
+
+.ms-legend-action {
+
+    // add bottom border on ms floating legend header
+    .ms-legend-header {
+        border-bottom: 4px solid @pm-dark-blue;
+
+        .btn-primary {
+            background-color: @pm-green;
+            border-color    : @pm-green;
+        }
+
+        .btn.no-border {
+            color: @pm-green;
+        }
+
+        h5 {
+            font-weight: 800;
+        }
+    }
+
+    .text-primary {
+        color: @pm-green;
+    }
+
+    .panel-collapse .panel-body .msSideGrid .noUi-target {
+        background-color: @pm-green;
+    }
+}
+
+.mapstore-slider.with-tooltip .noUi-target.noUi-horizontal .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
+    background-color: @pm-green;
+}
+
+.photomap-map-attribution {
+    position: absolute;
+    left    : 0;
+    color   : lighten(@ms2-color-text, 30%);
+
+    >img {
+        height: 30px;
+    }
+}
+
+.pm-footer-desc {
+    color: lighten(@ms2-color-text, 30%);
+}

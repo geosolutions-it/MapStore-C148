@@ -17,7 +17,8 @@ module.exports = require('./MapStore2/buildConfig')(
         'MapStore-C148-api': path.join(__dirname, "MapStore2", "web", "client", "product", "api")
     },
     {
-        "themes/default": path.join(__dirname, "assets", "themes", "default", "theme.less")
+        "themes/default": path.join(__dirname, "assets", "themes", "default", "theme.less"),
+        "themes/surveye": path.join(__dirname, "assets", "themes", "surveye", "theme.less")
     },
     paths,
     extractThemesPlugin,

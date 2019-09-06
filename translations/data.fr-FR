@@ -2,9 +2,11 @@
     "locale": "fr-FR",
     "messages": {
         "photomapViewerAttribution": "<small>© Photomap, All Rights reserved |</small>",
+        "photomapSurveyeViewerAttribution": "<span>© SURVEYE, s.r.o, All Rights reserved |</span>",
         "home":{
             "shortDescription": " ",
-            "footerDescription": "<small><strong>PHOTOMAP, s.r.o.</strong> / powered by GeoSolutions</small>"
+            "footerDescription": "<small><strong>PHOTOMAP, s.r.o.</strong> / powered by GeoSolutions</small>",
+            "footerSurveyeDescription": "<span>SURVEYE, s.r.o. /+421 55 6854 396, +421 905 966 022 /info@surveye.sk</span>"
         }
     }
 }

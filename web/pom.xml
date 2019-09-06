@@ -219,7 +219,7 @@
                     </configuration>
                 </execution>
                 <execution>
-                    <id>html, configuration files and images</id>
+                    <id>html, less and images</id>
                     <phase>process-classes</phase>
                     <goals>
                         <goal>copy-resources</goal>
@@ -232,7 +232,6 @@
                                 <directory>${basedir}/..</directory>
                                 <includes>
                                     <include>**/*.html</include>
-                                    <include>**/*.json</include>
                                     <include>**/img/*</include>
                                     <include>**/*.less</include>
                                 </includes>
@@ -419,6 +418,119 @@
         </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+        <id>app-default</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <build>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <executions>
+                       <execution>
+                            <id>configuration files</id>
+                            <phase>process-classes</phase>
+                            <goals>
+                                <goal>copy-resources</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${basedir}/target/MapStore-C148</outputDirectory>
+                                <encoding>UTF-8</encoding>
+                                <resources>
+                                    <resource>
+                                        <directory>${basedir}/..</directory>
+                                        <includes>
+                                            <include>**/*.json</include>
+                                        </includes>
+                                        <excludes>
+                                            <exclude>node_modules/*</exclude>
+                                            <exclude>node_modules/**/*</exclude>
+                                            <exclude>MapStore2/*</exclude>
+                                            <exclude>MapStore2/**/*</exclude>
+                                            <exclude>**/localConfigSurveye.json</exclude>
+                                            <exclude>**/libs/Cesium/**/*</exclude>
+                                            <exclude>**/test-resources/*</exclude>
+                                        </excludes>
+                                    </resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+    <profile>
+        <id>surveye</id>
+        <activation>
+            <property>
+                <name>theme</name>
+                <value>surveye</value>
+            </property>
+        </activation>
+        <build>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <executions>
+                       <execution>
+                            <id>configuration files</id>
+                            <phase>process-classes</phase>
+                            <goals>
+                                <goal>copy-resources</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${basedir}/target/MapStore-C148</outputDirectory>
+                                <encoding>UTF-8</encoding>
+                                <resources>
+                                    <resource>
+                                        <directory>${basedir}/..</directory>
+                                        <includes>
+                                            <include>**/*.json</include>
+                                        </includes>
+                                        <excludes>
+                                            <exclude>node_modules/*</exclude>
+                                            <exclude>node_modules/**/*</exclude>
+                                            <exclude>MapStore2/*</exclude>
+                                            <exclude>MapStore2/**/*</exclude>
+                                            <exclude>**/localConfig.json</exclude>
+                                            <exclude>**/libs/Cesium/**/*</exclude>
+                                            <exclude>**/test-resources/*</exclude>
+                                        </excludes>
+                                    </resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>com.coderplus.maven.plugins</groupId>
+                     <!-- we need to rename localConfigSurveye to localConfig to make it compatible with MS -->
+                    <artifactId>copy-rename-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <executions>
+                        <execution>
+                            <id>copy-and-rename-file</id>
+                            <phase>process-classes</phase>
+                            <goals>
+                                <goal>rename</goal>
+                            </goals>
+                            <configuration>
+                                <sourceFile>${basedir}/target/MapStore-C148/localConfigSurveye.json</sourceFile>
+                                <destinationFile>${basedir}/target/MapStore-C148/localConfig.json</destinationFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+  </profiles>
 
 	<repositories>
         <!-- GeoSolutions -->

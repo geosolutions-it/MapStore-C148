@@ -15,19 +15,28 @@ import HTML from '../../MapStore2/web/client/components/I18N/HTML';
 class PhotomapAttribution extends React.Component {
 
     static propTypes = {
-        src: PropTypes.string
+        src: PropTypes.string,
+        attributionTextId: PropTypes.string
     };
 
     render() {
+        const { attributionTextId } = this.props;
         return (
             <div className="photomap-map-attribution">
                 <img src={this.props.src || src}/>
-                <HTML msgId="photomapViewerAttribution"/>
+                { attributionTextId ? <HTML msgId={attributionTextId}/> : null }
             </div>
         );
     }
 }
 
+/**
+ * Attribution plugin
+ * @memberof plugins
+ * @class PhotomapAttribution
+ * @static
+ * @prop {string} cfg.attributionTextId contain attribution text Id
+ */
 export const PhotomapAttributionPlugin = assign(PhotomapAttribution, {
     MapFooter: {
         name: 'photomap-attribution',
