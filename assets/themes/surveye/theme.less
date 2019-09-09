@@ -140,6 +140,14 @@
     background-color: @pm-green;
 }
 
+/* moved background attribution in map footer to gain space for Photomap attribution */
+.mapstore-map-footer .ol-attribution.ol-uncollapsible {
+    left: 350px;
+    width: ~"calc(50% - 350px)";
+    display: flex;
+    align-items: center;
+}
+
 .photomap-map-attribution {
     position: absolute;
     left    : 0;
