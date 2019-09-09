@@ -12,7 +12,11 @@
            "https://maps.photomap.sk:443",
            "http://mapstore.photomap.sk",
            "https://mapstore.photomap.sk",
-           "https://mapstore.photomap.sk:443"
+           "https://mapstore.photomap.sk:443",
+	   "http://back-office.surveye.sk/geoserver",
+	   "https://back-office.surveye.sk/geoserver",
+	   "http://maps.surveye.sk/geoserver",
+	   "https://maps.surveye.sk/geoserver"
         ]
     },
     "geoStoreUrl": "rest/geostore/",
@@ -72,10 +76,10 @@
                 "isNew": true,
                 "autoload": false
             },
-            "selectedService": "PHOTOMAP WMS Service",
+            "selectedService": "SURVEYE WMS Service",
             "services": {
-              "PHOTOMAP WMS Service": {
-                "url": "https://maps.photomap.sk/geoserver/wms",
+              "SURVEYE WMS Service": {
+                "url": "https://maps.surveye.sk/geoserver/wms",
                 "type": "wms",
                 "title": "PHOTOMAP WMS Service",
                 "autoload": true
