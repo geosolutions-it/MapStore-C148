@@ -81,7 +81,7 @@
               "SURVEYE WMS Service": {
                 "url": "https://maps.surveye.sk/geoserver/wms",
                 "type": "wms",
-                "title": "PHOTOMAP WMS Service",
+                "title": "SURVEYE WMS Service",
                 "autoload": true
               }
             }
@@ -494,7 +494,7 @@
         {
             "name": "Attribution",
             "cfg": {
-                "label": "PHOTOMAP",
+                "label": "SURVEYE",
                 "href": "#",
                 "src": "assets/img/surveye-logo.png"
             }
@@ -540,8 +540,8 @@
                 "src": "assets/img/surveye-logo.png",
                 "width": 140,
                 "href": "",
-                "title": "PHOTOMAP",
-                "alt": "PHOTOMAP"
+                "title": "SURVEYE",
+                "alt": "SURVEYE"
               }
             }
           }, {
@@ -563,7 +563,7 @@
              "catalog": {
               "url": "/geoserver/wms",
               "type": "wms",
-              "title": "Photomap WMS Service",
+              "title": "SURVEYE WMS Service",
               "autoload": true
             },
             "containerPosition": "columns"
@@ -600,8 +600,8 @@
                 "src": "assets/img/surveye-logo.png",
                 "width": 140,
                 "href": "",
-                "title": "PHOTOMAP",
-                "alt": "PHOTOMAP"
+                "title": "SURVEYE",
+                "alt": "SURVEYE"
               }
             }
           }
