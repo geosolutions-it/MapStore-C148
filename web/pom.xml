@@ -515,7 +515,7 @@
                     <version>1.0</version>
                     <executions>
                         <execution>
-                            <id>copy-and-rename-file</id>
+                            <id>replace_localConfig.json</id>
                             <phase>process-classes</phase>
                             <goals>
                                 <goal>rename</goal>
@@ -523,6 +523,18 @@
                             <configuration>
                                 <sourceFile>${basedir}/target/MapStore-C148/localConfigSurveye.json</sourceFile>
                                 <destinationFile>${basedir}/target/MapStore-C148/localConfig.json</destinationFile>
+                            </configuration>
+                        </execution>
+                        <!-- replace the favicon -->
+                        <execution>
+                            <id>replace-favicon.ico</id>
+                            <phase>process-classes</phase>
+                            <goals>
+                                <goal>copy</goal>
+                            </goals>
+                            <configuration>
+                                <sourceFile>${basedir}/target/MapStore-C148/assets/img/surveye-favicon.ico</sourceFile>
+                                <destinationFile>${basedir}/target/MapStore-C148/assets/img/favicon.ico</destinationFile>
                             </configuration>
                         </execution>
                     </executions>
