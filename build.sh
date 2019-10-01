@@ -21,14 +21,15 @@ for ARGUMENT in "$@"; do
     esac
 
 done
-
+COMPILE_OPTS="";
 MAVEN_PROPERTIES="-Dmapstore2.version=$VERSION"
 if [ -n "$THEME" ]; then
-    MAVEN_PROPERTIES="$MAVEN_PROPERTIES -Dtheme=$THEME"
+    MAVEN_PROPERTIES="$MAVEN_PROPERTIES -Dtheme=$THEME" # adds theme profile for copy correct resources
+    COMPILE_OPTS=" -- --env.theme=$THEME"; # add theme env variable for webpack template customizations
 fi
 
 npm install
-npm run compile
+npm run compile $COMPILE_OPTS
 npm run lint
 
 mvn -U clean install $MAVEN_PROPERTIES;
